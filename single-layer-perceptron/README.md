@@ -1,41 +1,35 @@
 # Single Layer Perceptron from Scratch
 
-A complete implementation of a **Single Layer Perceptron** from scratch using Python for binary classification on the **UCI Banknote Authentication Dataset**. This project demonstrates the complete machine learning workflow—from exploratory data analysis and feature preprocessing to implementing the Perceptron learning algorithm, evaluating model performance, and comparing it with Scikit-learn's implementation.
+A NumPy implementation of the **Single Layer Perceptron** for binary classification, built entirely from scratch without using machine learning libraries for the learning algorithm. The project demonstrates the complete machine learning workflow, including exploratory data analysis, feature preprocessing, model training, performance evaluation, hyperparameter analysis, and comparison with Scikit-learn.
 
 ---
 
-## Overview
-
-The objective of this project is to understand the fundamentals of an artificial neuron by implementing a Single Layer Perceptron without relying on machine learning libraries for the learning algorithm.
-
-The project includes:
+## Features
 
 - Exploratory Data Analysis (EDA)
-- Feature normalization
-- Custom Perceptron implementation
-- Model training using the Perceptron Learning Rule
-- Performance evaluation
-- Learning rate analysis
-- Comparison with Scikit-learn's Perceptron
+- Data preprocessing using feature standardization
+- Single Layer Perceptron implemented from scratch
+- Step activation function
+- Online Perceptron Learning Rule
+- Training error visualization
+- Weight and bias evolution tracking
+- Learning rate comparison
+- Performance evaluation using multiple metrics
+- Benchmark against Scikit-learn's Perceptron
 
 ---
 
 ## Dataset
 
-**Dataset:** Banknote Authentication Dataset
+**Banknote Authentication Dataset**
 
-**Source:** UCI Machine Learning Repository
+The dataset contains extracted statistical features from genuine and forged banknotes.
 
-https://archive.ics.uci.edu/dataset/267/banknote+authentication
-
-### Dataset Summary
-
-| Attribute | Value |
-|-----------|-------|
+| Property | Value |
+|----------|------:|
 | Samples | 1372 |
 | Features | 4 |
 | Classes | 2 |
-| Missing Values | None |
 
 ### Features
 
@@ -44,117 +38,141 @@ https://archive.ics.uci.edu/dataset/267/banknote+authentication
 - Kurtosis
 - Entropy
 
-Target Classes:
+Target labels:
 
-- **0** → Authentic Banknote
-- **1** → Forged Banknote
+- **0** → Authentic
+- **1** → Forged
+
+Dataset Source:
+https://archive.ics.uci.edu/dataset/267/banknote+authentication
+
+---
+
+## Project Workflow
+
+```
+Dataset
+    │
+    ▼
+Exploratory Data Analysis
+    │
+    ▼
+Feature Standardization
+    │
+    ▼
+Train-Test Split
+    │
+    ▼
+Perceptron Implementation
+    │
+    ▼
+Model Training
+    │
+    ▼
+Performance Evaluation
+    │
+    ▼
+Learning Rate Analysis
+    │
+    ▼
+Scikit-learn Comparison
+```
 
 ---
 
 ## Exploratory Data Analysis
 
-The following analyses were performed before model training:
+The notebook includes
 
-- Feature Histograms
+- Histograms
 - Correlation Heatmap
 - Pairwise Scatter Plots
-- Variance vs Skewness Visualization
-- Feature Boxplots
+- Variance vs Skewness Scatter Plot
+- Boxplots
 
-The dataset shows that the two classes are approximately linearly separable, making it suitable for a Single Layer Perceptron.
+These visualizations provide insights into feature distributions, class separability, correlations, and outliers before training the model.
 
 ---
 
 ## Data Preprocessing
 
-Before training:
+Before training, the following preprocessing steps were applied:
 
-- Missing values were checked
-- Numerical features were standardized using **StandardScaler**
-- Dataset split into:
-
-  - **80% Training**
-  - **20% Testing**
+- Missing value verification
+- Feature standardization using `StandardScaler`
+- Stratified 80:20 train-test split
 
 ---
 
 ## Perceptron Implementation
 
-The model was implemented completely from scratch using NumPy.
+The model was implemented entirely using NumPy.
 
-Implemented components include:
+### Components
 
-- Random Weight Initialization
-- Bias Initialization
-- Step Activation Function
-- Forward Propagation
-- Online Perceptron Learning Rule
-- Epoch-wise Error Tracking
-- Weight Evolution
-- Bias Evolution
+- Random weight initialization
+- Bias initialization
+- Step activation function
+- Forward propagation
+- Online weight updates
+- Bias updates
+- Epoch-wise training
+- Error tracking
 
-No machine learning library was used for the custom implementation.
+Unlike Scikit-learn, every step of the learning algorithm is implemented manually to better understand the Perceptron learning process.
 
 ---
 
-## Model Evaluation
-
-Performance was evaluated using
-
-- Accuracy
-- Precision
-- Recall
-- F1-score
-- Confusion Matrix
-
-### Results
+## Performance
 
 | Metric | Score |
-|--------|-------|
+|---------|-------:|
 | Accuracy | **98.91%** |
 | Precision | **98.37%** |
 | Recall | **99.18%** |
-| F1-score | **98.78%** |
+| F1 Score | **98.78%** |
 
-Only **3 test samples** were misclassified.
+The custom implementation correctly classified **272 out of 275** test samples.
 
 ---
 
-## Learning Rate Comparison
+## Learning Rate Analysis
 
-Three learning rates were evaluated.
+Three different learning rates were evaluated.
 
-| Learning Rate | Accuracy |
-|--------------|----------|
+| Learning Rate | Test Accuracy |
+|--------------:|--------------:|
 | 0.001 | 98.55% |
 | **0.01** | **98.91%** |
 | 0.1 | 98.55% |
 
-The learning rate **0.01** achieved the best balance between convergence speed and stability.
+The experiments show that:
+
+- **0.001** converges smoothly but slowly.
+- **0.1** converges faster but exhibits larger oscillations.
+- **0.01** provides the best trade-off between convergence speed and stability.
 
 ---
 
 ## Comparison with Scikit-learn
 
-The custom implementation was compared against Scikit-learn's built-in Perceptron classifier.
-
-| Model | Accuracy | Precision | Recall | F1-score |
-|-------|----------|-----------|--------|----------|
+| Model | Accuracy | Precision | Recall | F1 Score |
+|-------|----------:|----------:|--------:|---------:|
 | Custom Perceptron | **98.91%** | **98.37%** | 99.18% | **98.78%** |
-| Scikit-learn Perceptron | 98.55% | 96.83% | **100%** | 98.39% |
+| Scikit-learn Perceptron | 98.55% | 96.83% | **100.00%** | 98.39% |
 
-The custom implementation achieved comparable performance while demonstrating the underlying Perceptron learning algorithm.
+The manually implemented Perceptron achieves performance comparable to Scikit-learn while providing complete transparency into the learning algorithm.
 
 ---
 
 ## Visualizations
 
-The project includes:
+The notebook generates:
 
 - Feature Histograms
 - Correlation Heatmap
-- Pairwise Scatter Plots
-- Variance vs Skewness Scatter Plot
+- Pairwise Feature Scatter Plots
+- Variance vs Skewness Class Distribution
 - Feature Boxplots
 - Training Error vs Epoch
 - Weight Evolution
@@ -181,30 +199,13 @@ The project includes:
 .
 ├── data/
 │   └── banknote_authentication.csv
-├── notebook.ipynb
+├── perceptron_exp.ipynb
 ├── report.pdf
-├── README.md
-└── requirements.txt
+└── README.md
 ```
-
----
-
-## Key Learnings
-
-- Fundamentals of Artificial Neurons
-- Perceptron Learning Algorithm
-- Binary Classification
-- Feature Standardization
-- Linear Separability
-- Model Evaluation Metrics
-- Hyperparameter Analysis
-- Comparison between custom implementations and machine learning libraries
-
----
 
 ## References
 
 - Frank Rosenblatt — *The Perceptron (1958)*
 - UCI Machine Learning Repository
 - Scikit-learn Documentation
-- Deep Learning by Goodfellow, Bengio & Courville
