@@ -1,4 +1,0 @@
-Data used from: Dataset: Banknote Authentication Dataset
-Source: UCI Machine Learning Repository
-Download Link:
-https://archive.ics.uci.edu/dataset/267/banknote+authentication
