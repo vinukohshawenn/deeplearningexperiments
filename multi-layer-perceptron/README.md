@@ -19,9 +19,7 @@ Implementation of a Multi-Layer Perceptron (MLP) in TensorFlow/Keras for multi-c
 | F1-score (macro) | 0.8799 | 0.8821 |
 | Training Time | 125.14 s | 66.81 s |
 
-**Best hyperparameters found:** 1 hidden layer, 256 neurons, learning rate 0.001, batch size 128, Adam optimizer, Tanh activation, 20 epochs, dropout 0.2 (cross-validation accuracy: 0.8375).
-
-Full results, plots, and discussion are in [`report.pdf`](./report.pdf).
+**Best hyperparameters found:** 1 hidden layer, 256 neurons, learning rate 0.001, batch size 128, Adam optimizer, Tanh activation, 20 epochs, dropout 0.2 (cross-validation accuracy: 0.8375)
 
 ## Dataset
 
