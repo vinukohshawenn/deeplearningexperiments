@@ -34,7 +34,6 @@ Full results, plots, and discussion are in [`report.pdf`](./report.pdf).
 ```
 .
 ├── source_code.py          # Full experiment script (data loading through final comparison)
-├── report.tex               # LaTeX report source
 ├── report.pdf                # Compiled report
 ├── figures/                  # All generated plots (referenced by report.tex)
 │   ├── fig_sample_images.png
