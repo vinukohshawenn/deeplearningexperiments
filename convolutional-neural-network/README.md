@@ -29,8 +29,6 @@ Implementation of a Convolutional Neural Network (CNN) in TensorFlow/Keras for m
 **Best-performing class:** Automobile (F1 = 0.86)
 **Worst-performing class:** Cat (F1 = 0.55) — frequently confused with Dog and Bird
 
-Full per-class metrics, epoch-wise training log, and discussion are in [`report.pdf`](./report.pdf).
-
 ## Dataset
 
 - **CIFAR-10**: 50,000 training images, 10,000 testing images, 10 classes, 32×32 RGB
