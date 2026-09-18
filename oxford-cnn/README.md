@@ -23,22 +23,22 @@ and says so explicitly (Section 13).
 
 ### Plot-to-file mapping
 
-| Plot # | Section | Image file |
+| Plot # | Section |
 |---|---|---|
-| 1 | Weight Initialization — Training Loss | `plot1_training_loss_init.png` |
-| 2 | Weight Initialization — Validation Accuracy | `plot2_val_acc_init.png` |
-| 3 | Regularization — Train/Val Accuracy | `plot3_train_val_acc_reg.png` |
-| 4 | Regularization — Train/Val Loss | `plot4_train_val_loss_reg.png` |
-| 5 | Batch Normalization — With vs. Without | `plot5_bn_vs_no_bn.png` |
-| 6 | Optimizers — Training Loss | `plot6_train_loss_opt.png` |
-| 7 | Optimizers — Validation Accuracy | `plot7_val_acc_opt.png` |
-| 8 | Hyperparameters — Learning Rate | `plot8_lr_vs_acc.png` |
-| 9 | Hyperparameters — Batch Size | `plot9_batch_vs_acc.png` |
-| 10 | Hyperparameters — Dropout Rate | `plot10_dropout_vs_acc.png` |
-| 11 | Transfer Learning — Feature Extraction vs. Fine-Tuning | `plot11_feature_vs_finetune.png` |
-| 12 | Transfer Learning — Train/Val Loss | `plot12_train_val_loss_ft.png` |
-| 13 | 5-Fold Cross-Validation Accuracy | `plot13_cv_accuracy.png` |
-| 14 | Confusion Matrix (final model) | `plot14_confusion_matrix.png` |
+| 1 | Weight Initialization — Training Loss |
+| 2 | Weight Initialization — Validation Accuracy | 
+| 3 | Regularization — Train/Val Accuracy |
+| 4 | Regularization — Train/Val Loss |
+| 5 | Batch Normalization — With vs. Without | 
+| 6 | Optimizers — Training Loss | 
+| 7 | Optimizers — Validation Accuracy | 
+| 8 | Hyperparameters — Learning Rate |
+| 9 | Hyperparameters — Batch Size | 
+| 10 | Hyperparameters — Dropout Rate |
+| 11 | Transfer Learning — Feature Extraction vs. Fine-Tuning | 
+| 12 | Transfer Learning — Train/Val Loss | 
+| 13 | 5-Fold Cross-Validation Accuracy | 
+| 14 | Confusion Matrix (final model) |
 
 ### Key results summary
 
@@ -56,11 +56,3 @@ CV/test model, ~11–19%) and the transfer-learning results (Section 10, ~86–8
 is expected on a 37-class fine-grained dataset with a small training set and only 5
 epochs per run, and is a useful discussion point for the report's Discussion Questions
 (Section 15).
-
-## What's still left for the student to do
-
-The Section 14 "Required Inference for Plots" convention and the Section 15/16
-discussion questions and additional exercise are intentionally left as open write-in
-tasks — those call for the student's own reasoning, not just a restatement of numbers.
-Short inference paragraphs have already been added under each plot/table to jump-start
-that discussion, but the discussion questions themselves are unanswered.
