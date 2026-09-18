@@ -24,7 +24,7 @@ and says so explicitly (Section 13).
 ### Plot-to-file mapping
 
 | Plot # | Section |
-|---|---|---|
+|---|---|
 | 1 | Weight Initialization — Training Loss |
 | 2 | Weight Initialization — Validation Accuracy | 
 | 3 | Regularization — Train/Val Accuracy |
