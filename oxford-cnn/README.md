@@ -9,7 +9,7 @@ Experiment 5**, based on a MobileNetV2 / Oxford-IIIT Pet dataset run recorded in
 | File | Description |
 |---|---|
 | `experiment_5_1_updated.pdf` | Compiled PDF (14 pages), ready to submit as-is. |
-| `images/` | 14 PNG plots extracted directly from the notebook's saved cell outputs (see table below). |
+| `cnn-oxford.ipynb` | Notebook containing the experiment. |
 
 
 ## Where the numbers came from
